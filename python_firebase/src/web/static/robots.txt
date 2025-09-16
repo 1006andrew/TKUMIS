@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /cdn-cgi
+Allow: /cdn-cgi/imagedelivery/
+Sitemap: https://blondy-u5tkmwzehu.figweb.site/sitemap.xml

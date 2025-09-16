@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Skin Test 分析</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="/static/skintest/result.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="bg-white rounded-2xl shadow-xl p-8 w-full max-w-lg">
+    <h1 class="text-2xl font-bold mb-6 text-center">Skin Test 分析</h1>
+
+    <!-- 上傳表單 -->
+    <form id="uploadForm" class="flex flex-col items-center space-y-4">
+      <input type="file" id="fileInput" name="file" accept="image/*"
+        class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4
+               file:rounded-full file:border-0 file:text-sm file:font-semibold
+               file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" required />
+
+      <!-- 預覽圖片 -->
+      <img id="preview" class="hidden w-48 h-48 object-cover rounded-lg border border-gray-300" />
+
+      <button type="submit"
+        class="px-6 py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700">
+        分析
+      </button>
+    </form>
+
+    <!-- 分析結果 -->
+    <div id="result" class="mt-6 p-4 hidden bg-gray-50 border border-gray-200 rounded-lg">
+      <h2 class="text-lg font-bold mb-2">分析結果</h2>
+      <p><strong>Oily Skin:</strong> <span id="oilLabel"></span> (Prob: <span id="oilProb"></span>)</p>
+      <p><strong>Sensitive Skin:</strong> <span id="sensiLabel"></span> (Prob: <span id="sensiProb"></span>)</p>
+    </div>
+  </div>
+</body>
+</html>
