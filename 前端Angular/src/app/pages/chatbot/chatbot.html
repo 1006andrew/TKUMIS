@@ -1,0 +1,19 @@
+<div class="chatbot-container">
+  <h2>🤖 膚質顧問 Chatbot</h2>
+
+  <div class="chat-window">
+    <div *ngFor="let msg of messages" class="message" [ngClass]="msg.role">
+      <span>{{ msg.text }}</span>
+    </div>
+    <div *ngIf="loading" class="message bot">
+      <span>正在思考中...</span>
+    </div>
+  </div>
+
+  <div class="chat-input">
+    <input [(ngModel)]="question"
+           (keyup.enter)="sendQuestion()"
+           placeholder="輸入你的問題，例如：我是油性膚質，我要如何保養？" />
+    <button (click)="sendQuestion()">送出</button>
+  </div>
+</div>

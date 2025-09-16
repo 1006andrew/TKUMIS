@@ -1,0 +1,47 @@
+<section class="book">
+  <h1>預約人資料</h1>
+
+  <div *ngIf="!loading(); else loadingTpl">
+    <div class="cards">
+      <!-- 使用者資料卡 -->
+      <div class="card" *ngIf="profile() as user">
+        <div class="card-title">{{ user.displayName }}</div>
+        <div class="meta">
+          <div>手機號碼　{{ user.phone || '—' }}</div>
+          <div>電子郵件　{{ user.email || '—' }}</div>
+        </div>
+      </div>
+
+      <!-- 新增資料卡 -->
+      <div class="card add">
+        <span>＋ 新增預約人資料</span>
+      </div>
+    </div>
+
+    <!-- ✅ 療程選擇 -->
+    <div class="treatment">
+      <label for="treatmentSelect">選擇療程：</label>
+      <select id="treatmentSelect" [(ngModel)]="selectedTreatment">
+        <option *ngFor="let t of treatments" [value]="t">{{ t }}</option>
+      </select>
+    </div>
+
+    <!-- ✅ 日期時間選擇 -->
+    <div class="datetime">
+      <label for="date">選擇日期：</label>
+      <input id="date" type="date" [(ngModel)]="selectedDate" />
+
+      <label for="time">選擇時間：</label>
+      <input id="time" type="time" [(ngModel)]="selectedTime" />
+    </div>
+
+    <!-- ✅ 送出按鈕 -->
+    <button class="submit-btn" (click)="submitBooking()">送出預約</button>
+  </div>
+
+  <ng-template #loadingTpl>
+    <div class="loading">載入中…</div>
+  </ng-template>
+
+  <div class="error" *ngIf="error()">{{ error() }}</div>
+</section>

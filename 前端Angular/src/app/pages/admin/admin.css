@@ -1,0 +1,122 @@
+.admin-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: #2d3748;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.add-user-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.content {
+  flex: 1;
+  padding: 80px 20px 20px; /* 上方留出 navbar 高度 */
+}
+
+/* --- 管理後台美化樣式 --- */
+
+/* 左側 sidebar 提升質感 */
+.sidebar {
+  background: linear-gradient(180deg, #2d3748, #1a202c);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(5px);
+}
+
+/* 右側主要內容 */
+.content {
+  background: #f9fafb;
+  border-radius: 12px 0 0 12px;
+  padding: 80px 40px 40px; /* ✅ 上面留出 navbar 高度 */
+  overflow-y: auto;
+}
+
+/* 主要標題 */
+.content h1 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #2d3748;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.content h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+/* 表單區域 (例如新增使用者) */
+.add-user-form {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.add-user-form:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}

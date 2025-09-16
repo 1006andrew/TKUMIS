@@ -1,0 +1,45 @@
+<div class="skin-test-container">
+  <div class="card">
+    <h1 class="title">Skin Test 分析</h1>
+
+    <!-- 上傳 -->
+    <div class="upload-section">
+      <input type="file" (change)="onFileSelected($event)" accept="image/*" />
+    </div>
+
+    <!-- 預覽 -->
+    <div *ngIf="previewUrl" class="preview">
+      <img [src]="previewUrl" alt="預覽圖片" />
+    </div>
+
+    <!-- 按鈕 -->
+    <button type="button" (click)="onSubmit()" class="analyze-btn" [disabled]="loading">
+      {{ loading ? '分析中...' : '分析' }}
+    </button>
+
+    <!-- 分析結果 -->
+    <div *ngIf="result" class="result-box">
+      <h2>分析結果</h2>
+      <p><strong>Oily Skin:</strong> {{ result.oil_label }} (Prob: {{ result.oil_prob | number:'1.2-2' }})</p>
+      <p><strong>Sensitive Skin:</strong> {{ result.sensi_label }} (Prob: {{ result.sensi_prob | number:'1.2-2' }})</p>
+    </div>
+
+    <!-- ✅ 選擇使用者並寫入 -->
+    <div *ngIf="result" class="save-section">
+      <h3>選擇要寫入的使用者</h3>
+      <select [(ngModel)]="selectedUserId">
+        <option [value]="null">-- 請選擇使用者 --</option>
+        <option *ngFor="let u of users" [value]="u.id">
+          {{ u.name }} ({{ u.email }})
+        </option>
+      </select>
+      <button (click)="saveResult()" [disabled]="!selectedUserId">寫入結果</button>
+    </div>
+
+    <!-- Debug JSON
+    <div *ngIf="result" class="debug-box">
+      <h3>DEBUG: 原始回應</h3>
+      <pre>{{ result | json }}</pre>
+    </div> -->
+  </div>
+</div>

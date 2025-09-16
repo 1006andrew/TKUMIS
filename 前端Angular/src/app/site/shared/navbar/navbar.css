@@ -1,0 +1,125 @@
+/* 整列固定在頂部 */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 24px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+/* —— 左：Logo —— */
+.logo img {
+  height: 40px;              /* 取自原 header 樣式的比例 */
+  object-fit: contain;
+}
+
+/* —— 中：選單 —— */
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.nav-list a.active {
+  color: #00b3bd;            /* 與品牌色一致 */
+}
+
+/* —— 右：使用者區 —— */
+.user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #00b3bd;
+  font-size: 16px;
+}
+
+.link-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #00b3bd;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Chatbot 快捷鈕（右上角小圖示） */
+.chatbot-icon {
+  background: #00b3bd;
+  color: #fff;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* —— Chatbot Panel（保留你現有樣式邏輯，略為收斂） —— */
+.chatbot-panel {
+  position: fixed;
+  top: 0;
+  right: -360px;
+  width: 320px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease;
+  z-index: 1100;
+}
+.chatbot-panel.open { right: 0; }
+
+.chatbot-header {
+  background: #00b3bd;
+  color: #fff;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.close-btn {
+  background: transparent; border: none; color: #fff; font-size: 18px; cursor: pointer;
+}
+
+.chatbot-messages { flex: 1; padding: 12px; overflow-y: auto; background: #f7f7f7; }
+.message { margin: 6px 0; padding: 8px 12px; border-radius: 12px; max-width: 80%; }
+.message.user { margin-left: auto; background: #d1e7ff; }
+.message.bot  { margin-right: auto; background: #e9e9e9; }
+
+.chatbot-input { display: flex; gap: 8px; padding: 12px; border-top: 1px solid #ddd; }
+.chatbot-input input { flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 6px; }
+.chatbot-input button { padding: 8px 12px; border: none; border-radius: 6px; background: #00b3bd; color: #fff; cursor: pointer; }
+.chatbot-input button:hover { background: #009ca4; }
+
+/* 響應式：畫面窄時收緊間距 */
+@media (max-width: 920px) {
+  .nav-list { gap: 14px; }
+  .user-name { display: none; }          /* 小螢幕隱藏名字，留頭像與登入/登出 */
+}

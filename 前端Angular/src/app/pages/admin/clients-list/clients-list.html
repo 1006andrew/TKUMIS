@@ -1,0 +1,70 @@
+<h2>會員清單</h2>
+
+<!-- 新增會員 -->
+<div class="add-client-form">
+  <input [(ngModel)]="newClient.name" placeholder="姓名" />
+  <input [(ngModel)]="newClient.email" placeholder="Email" type="email" />
+  <input [(ngModel)]="newClient.photoURL" placeholder="頭像 URL" />
+  <button (click)="addClient()">新增會員</button>
+</div>
+
+<!-- 會員清單 -->
+<table class="client-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>姓名</th>
+      <th>Email</th>
+      <th>頭像</th>
+      <th>註冊時間</th>
+      <th>更新時間</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of clients$ | async">
+      <!-- 編輯模式 -->
+      <ng-container *ngIf="editMode === c.id && editClient; else viewMode">
+        <td>{{ c.id }}</td>
+        <td><input [(ngModel)]="editClient.name" /></td>
+        <td><input [(ngModel)]="editClient.email" type="email" /></td>
+        <td><input [(ngModel)]="editClient.photoURL" placeholder="頭像 URL" /></td>
+        <td>
+          {{ editClient.createdAt?.seconds * 1000 | date: "yyyy/MM/dd HH:mm" }}
+        </td>
+        <td>
+          {{ editClient.updatedAt?.seconds * 1000 | date: "yyyy/MM/dd HH:mm" }}
+        </td>
+        <td>
+          <button (click)="updateClient()">儲存</button>
+          <button (click)="cancelEdit()">取消</button>
+        </td>
+      </ng-container>
+
+      <!-- 檢視模式 -->
+      <ng-template #viewMode>
+        <td>{{ c.id }}</td>
+        <td>{{ c.name }}</td>
+        <td>{{ c.email }}</td>
+        <td>
+          <img
+            *ngIf="c.photoURL"
+            [src]="c.photoURL"
+            alt="頭像"
+            width="40"
+            height="40"
+            style="border-radius: 50%"
+          />
+        </td>
+        <td>{{ c.createdAt?.seconds * 1000 | date: "yyyy/MM/dd HH:mm" }}</td>
+        <td>{{ c.updatedAt?.seconds * 1000 | date: "yyyy/MM/dd HH:mm" }}</td>
+        <td>
+          <button (click)="startEdit(c)">編輯</button>
+          <button (click)="deleteClient(c.id!)">刪除</button>
+          <!-- ✅ 新增：寫入膚質結果 -->
+          <!-- <button (click)="assignSkinResult(c.id!)">🧴 寫入膚質結果</button> -->
+        </td>
+      </ng-template>
+    </tr>
+  </tbody>
+</table>

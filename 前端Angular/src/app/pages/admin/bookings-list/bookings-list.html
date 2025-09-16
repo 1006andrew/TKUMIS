@@ -1,0 +1,37 @@
+<h2>預約清單</h2>
+
+<!-- 新增預約（選擇性，模仿 add-client-form） -->
+<!-- <div class="add-booking-form">
+  <input [(ngModel)]="newBooking.date" placeholder="日期" type="date" />
+  <input [(ngModel)]="newBooking.time" placeholder="時間" type="time" />
+  <input [(ngModel)]="newBooking.treatment" placeholder="療程項目" />
+  <input [(ngModel)]="newBooking.userId" placeholder="使用者 ID" />
+  <button (click)="addBooking()">新增預約</button>
+</div> -->
+
+<table class="client-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>日期</th>
+      <th>時間</th>
+      <th>療程項目</th>
+      <th>使用者</th>
+      <th>建立時間</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let b of (bookings$ | async) || []">
+      <td>{{ b.id }}</td>
+      <td>{{ b.date }}</td>
+      <td>{{ b.time }}</td>
+      <td>{{ b.treatment }}</td>
+      <td>{{ b.userId }}</td>
+      <td>{{ tsToMs(b.createdAt) | date: 'yyyy/MM/dd HH:mm' }}</td>
+      <!-- <td>
+        <button (click)="editBooking(b)">編輯</button>
+        <button (click)="deleteBooking(b.id)">刪除</button>
+      </td> -->
+    </tr>
+  </tbody>
+</table>

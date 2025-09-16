@@ -1,0 +1,63 @@
+<h2>產品管理</h2>
+
+<!-- 新增產品 -->
+<div class="add-product-form">
+  <input [(ngModel)]="newProduct.order_no" placeholder="排序號碼" />
+  <input [(ngModel)]="newProduct.product_name" placeholder="產品名稱" />
+  <input [(ngModel)]="newProduct.price_min" type="number" placeholder="最低價格" />
+  <input [(ngModel)]="newProduct.price_max" type="number" placeholder="最高價格" />
+  <button (click)="addProduct()">新增產品</button>
+</div>
+
+<!-- 產品清單 -->
+<table class="product-table">
+  <thead>
+    <tr>
+      <th>排序號碼</th>
+      <th>產品名稱</th>
+      <th>價格區間</th>
+      <th>更新時間</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of products$ | async">
+      <!-- 編輯模式 -->
+      <ng-container *ngIf="editMode === p.id && editProduct; else viewMode">
+        <td>
+          <input [(ngModel)]="editProduct.order_no" />
+        </td>
+        <td>
+          <input [(ngModel)]="editProduct.product_name" />
+        </td>
+        <td>
+          <input [(ngModel)]="editProduct.price_min" type="number" placeholder="最低" />
+          -
+          <input [(ngModel)]="editProduct.price_max" type="number" placeholder="最高" />
+        </td>
+        <td>
+          {{ editProduct.updated_at?.seconds * 1000 | date : 'yyyy/MM/dd HH:mm' }}
+        </td>
+        <td>
+          <button (click)="updateProduct()">儲存</button>
+          <button (click)="cancelEdit()">取消</button>
+        </td>
+      </ng-container>
+
+      <!-- 檢視模式 -->
+      <ng-template #viewMode>
+        <td>{{ p.order_no }}</td>
+        <td>{{ p.product_name }}</td>
+        <td>
+          {{ p.price_min | currency : 'TWD' }} -
+          {{ p.price_max | currency : 'TWD' }}
+        </td>
+        <td>{{ p.updated_at?.seconds * 1000 | date : 'yyyy/MM/dd HH:mm' }}</td>
+        <td>
+          <button (click)="startEdit(p)">編輯</button>
+          <button (click)="deleteProduct(p.id!)">刪除</button>
+        </td>
+      </ng-template>
+    </tr>
+  </tbody>
+</table>

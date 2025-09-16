@@ -1,0 +1,66 @@
+<section class="personal">
+  <header class="nav">
+    <div class="logo">
+      <img src="/assets/logo.jpg" alt="logo" />
+      <h1>個人專區</h1>
+    </div>
+    <div class="spacer"></div>
+    <div class="avatar" [title]="profile()?.displayName || '使用者'">
+      <img *ngIf="profile()?.avatarUrl; else init" [src]="profile()?.avatarUrl" alt="avatar" />
+      <ng-template #init
+        ><span>{{ avatarInitial }}</span></ng-template
+      >
+    </div>
+  </header>
+
+  <div class="container" *ngIf="!loading(); else loadingTpl">
+    <div class="hero">
+      <div class="left">
+        <div class="name">{{ profile()?.displayName || '—' }}</div>
+        <div class="meta">
+          <span *ngIf="profile()?.email">{{ profile()?.email }}</span>
+          <span *ngIf="profile()?.phone">｜{{ profile()?.phone }}</span>
+        </div>
+        <div class="sub" *ngIf="profile()?.lastVisitAt">
+          上次到訪：{{ profile()?.lastVisitAt | date : 'yyyy/MM/dd HH:mm' }}
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat" *ngFor="let s of stats()">
+          <!-- ✅ 如果是膚質，就做多行顯示 -->
+          <ng-container *ngIf="s.label === '膚質'; else normalStat">
+            <div class="value multiline">
+              <div *ngFor="let line of s.value ? (s.value + '').split('；') : []">
+                {{ line }}
+              </div>
+            </div>
+            <div class="label">{{ s.label }}</div>
+          </ng-container>
+          <ng-template #normalStat>
+            <div class="value">{{ s.value }}</div>
+            <div class="label">{{ s.label }}</div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-title">快速動作</div>
+        <div class="actions">
+          <button class="btn">預約療程</button>
+          <button class="btn">查看商品</button>
+          <button class="btn">肌膚測試</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footnote">資料由 Firestore 提供</div>
+  </div>
+
+  <ng-template #loadingTpl>
+    <div class="loading">載入中…</div>
+  </ng-template>
+
+  <div class="error" *ngIf="error()">{{ error() }}</div>
+</section>

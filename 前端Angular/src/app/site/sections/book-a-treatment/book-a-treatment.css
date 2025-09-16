@@ -1,0 +1,143 @@
+.book {
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.book h1 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  flex: 1 1 calc(50% - 20px);
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 16px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.meta {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.card.add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00b3bd;
+  font-weight: 600;
+  border: 2px dashed #00b3bd;
+  background: #f9ffff;
+}
+
+.card.add span {
+  font-size: 16px;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
+
+.error {
+  margin-top: 16px;
+  color: red;
+  font-size: 14px;
+}
+
+.treatment {
+  margin-top: 24px;
+  font-size: 16px;
+}
+
+.treatment label {
+  margin-right: 8px;
+  font-weight: 600;
+}
+
+.treatment select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.treatment select:focus {
+  border-color: #00b3bd;
+}
+
+
+.treatment, .datetime {
+  margin-top: 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.treatment label, .datetime label {
+  font-weight: 600;
+}
+
+.treatment select,
+.datetime input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.treatment select:focus,
+.datetime input:focus {
+  border-color: #00b3bd;
+}
+
+.submit-btn {
+  margin-top: 24px;
+  padding: 10px 20px;
+  background: #00b3bd;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background: #00949e;
+}
+

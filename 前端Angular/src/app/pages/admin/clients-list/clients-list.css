@@ -1,0 +1,136 @@
+/* 標題 */
+h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* 客戶清單表格 */
+.client-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  margin-top: 20px;
+}
+
+.client-table thead {
+  background: #f1f5f9;
+}
+
+.client-table th,
+.client-table td {
+  text-align: left;
+  padding: 12px 15px;
+  font-size: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.client-table th {
+  font-weight: bold;
+  color: #374151;
+}
+
+.client-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* 操作按鈕 */
+.client-table button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+/* 編輯按鈕 */
+.client-table button:nth-child(1) {
+  background: #10b981;
+  color: #fff;
+}
+
+.client-table button:nth-child(1):hover {
+  background: #059669;
+}
+
+/* 刪除按鈕 → 跟 products / records 一致 (灰色) */
+.client-table button:nth-child(2) {
+  background: #9ca3af;
+  color: #fff;
+}
+
+.client-table button:nth-child(2):hover {
+  background: #6b7280;
+}
+
+/* 儲存 / 取消 (編輯模式) */
+.client-table td button:first-child {
+  background: #3b82f6;
+}
+
+.client-table td button:first-child:hover {
+  background: #2563eb;
+}
+
+.client-table td button:last-child {
+  background: #9ca3af;
+  color: #fff;
+}
+
+.client-table td button:last-child:hover {
+  background: #6b7280;
+}
+
+
+/* 新增紀錄表單 */
+.add-client-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f9f9fb;
+  border: 1px solid #e3e6ef;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.add-client-form input {
+  flex: 1;
+  min-width: 150px;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border 0.2s ease-in-out;
+}
+
+.add-client-form input:focus {
+  border-color: #3b82f6;
+  outline: none;
+  box-shadow: 0 0 4px rgba(59, 130, 246, 0.3);
+}
+
+.add-client-form button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease-in-out;
+}
+
+.add-client-form button:hover {
+  background: #2563eb;
+}

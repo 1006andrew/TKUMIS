@@ -1,0 +1,39 @@
+<div class="admin-layout">
+  <!-- 側邊欄 -->
+  <aside class="sidebar">
+    <h2>管理後台</h2>
+    <nav>
+      <ul>
+        <!-- <li><a (click)="navigateTo('dashboard')">📊 主頁</a></li> -->
+        <li><a (click)="navigateTo('skin-test')">🧪 膚質檢測</a></li>
+        <li><a (click)="navigateTo('clients')">👥 客戶管理</a></li>
+        <li><a (click)="navigateTo('products')">📦 產品管理</a></li>
+        <li><a (click)="navigateTo('records')">📝 紀錄管理</a></li>
+        <li><a (click)="navigateTo('bookings')">📅 預約管理</a></li>
+
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- 主要內容區 -->
+  <main class="content">
+    <h1 *ngIf="page === 'dashboard'">歡迎進入管理後台</h1>
+
+    <!-- 膚質檢測 -->
+    <app-skin-test *ngIf="page === 'skin-test'"></app-skin-test>
+
+    <!-- 客戶管理 -->
+    <app-clients-list *ngIf="page === 'clients'"></app-clients-list>
+
+    <!-- 產品管理 -->
+    <app-products-list *ngIf="page === 'products'"></app-products-list>
+
+    <!-- 紀錄管理 -->
+    <app-records-list *ngIf="page === 'records'"></app-records-list>
+
+    <!-- 詳細資訊 -->
+    <app-detail *ngIf="page === 'detail'" [item]="detailItem"></app-detail>
+
+    <app-bookings-list *ngIf="page === 'bookings'"></app-bookings-list>
+  </main>
+</div>

@@ -1,0 +1,57 @@
+<nav class="navbar">
+  <!-- 左：Logo -->
+  <div class="logo">
+    <a routerLink="/">
+      <img src="assets/logo.jpg" alt="Natural Beauty Logo" />
+    </a>
+  </div>
+
+  <!-- 中：選單 -->
+  <ul class="nav-list">
+    <li *ngIf="auth.user()"><a routerLink="/personal-page" routerLinkActive="active">個人頁面</a></li> <!-- *ngIf="auth.isUser()" -->
+    <li *ngIf="auth.user()"><a routerLink="/book-a-treatment" routerLinkActive="active">預約</a></li> <!-- *ngIf="auth.isUser()" -->
+    <li><a routerLink="/brand" routerLinkActive="active">品牌介紹</a></li>
+    <li><a routerLink="/product" routerLinkActive="active">產品介紹</a></li>
+    <li><a routerLink="/therapy" routerLinkActive="active">療程介紹</a></li>
+    <!-- <li><a routerLink="/contact" routerLinkActive="active">聯絡我們</a></li> -->
+    <!-- src\app\service\auth.ts -->
+    <li *ngIf="auth.isAdmin()"><a routerLink="/admin" routerLinkActive="active">管理者頁面</a></li>
+  </ul>
+
+  <!-- 右：使用者 -->
+  <div class="user">
+    <ng-container *ngIf="auth.user() as u; else guest">
+      <img *ngIf="u.photoURL" [src]="u.photoURL" class="avatar" alt="頭像" />
+      <span class="user-name">{{ u.name || u.email }}</span>
+      <button class="link-btn" (click)="auth.clearUser()">登出</button>
+    </ng-container>
+    <ng-template #guest>
+      <a class="link-btn" routerLink="/login">登入</a>
+    </ng-template>
+
+    <!-- Chatbot 快捷 -->
+    <button class="chatbot-icon" (click)="toggleChatbot()" aria-label="開啟聊天">
+      💬
+    </button>
+  </div>
+</nav>
+
+<!-- Chatbot Panel（保持既有功能） -->
+<div class="chatbot-panel" [class.open]="chatbotOpen">
+  <div class="chatbot-header">
+    <strong>LLM Chatbot</strong>
+    <button class="close-btn" (click)="toggleChatbot()">✖</button>
+  </div>
+
+  <div class="chatbot-messages">
+    <div *ngFor="let msg of messages" class="message" [ngClass]="msg.role">
+      {{ msg.text }}
+    </div>
+    <div *ngIf="loading" class="message bot">正在思考中...</div>
+  </div>
+
+  <div class="chatbot-input">
+    <input [(ngModel)]="question" (keyup.enter)="sendQuestion()" placeholder="輸入訊息..." />
+    <button (click)="sendQuestion()">送出</button>
+  </div>
+</div>
