@@ -1,0 +1,696 @@
+{
+    "skin_type_id": "dry_aging",
+    "title": "極線立提瞬效護理",
+    "category": "course",
+    "steps": [
+        "全程"
+    ],
+    "concerns": [
+        "乾燥",
+        "細紋",
+        "鬆弛",
+        "老化"
+    ],
+    "claims": [
+        "緊緻拉提",
+        "撫平細紋",
+        "提升彈性"
+    ],
+    "usage": "作為乾性/老化肌立即性緊緻課程。",
+    "tags": [
+        "瞬效護理",
+        "拉提"
+    ]
+}
+{
+    "skin_type_id": "dry_aging",
+    "title": "NB-1活膚緊實臉部課程",
+    "category": "course",
+    "steps": [
+        "全程"
+    ],
+    "concerns": [
+        "鬆弛",
+        "皺紋",
+        "乾燥"
+    ],
+    "claims": [
+        "啟動細胞活化",
+        "撫平細紋",
+        "緊緻彈潤"
+    ],
+    "usage": "進階臉部緊實課程，可搭配同系列產品強化效果。",
+    "tags": [
+        "NB-1",
+        "緊實"
+    ]
+}
+{
+    "skin_type_id": "dry_aging",
+    "title": "綠冷冷霜",
+    "category": "product",
+    "steps": [
+        "潔膚"
+    ],
+    "concerns": [
+        "乾燥",
+        "敏感傾向"
+    ],
+    "claims": [
+        "溫和潔膚",
+        "保濕",
+        "不刺激"
+    ],
+    "usage": "療程前卸妝/潔膚，為乾性或敏感傾向肌建立溫和清潔基礎。",
+    "aka": [
+        "綠色冷霜"
+    ],
+    "tags": [
+        "潔膚"
+    ]
+}
+{
+    "skin_type_id": "dry_aging",
+    "title": "青春系列精華液",
+    "category": "product",
+    "steps": [
+        "精華導入"
+    ],
+    "concerns": [
+        "細紋",
+        "彈性流失"
+    ],
+    "claims": [
+        "抗老",
+        "緊實"
+    ],
+    "usage": "於精華導入階段使用，可配合儀器提升吸收。",
+    "tags": [
+        "精華",
+        "抗老"
+    ]
+}
+{
+    "skin_type_id": "dry_aging",
+    "title": "NB水潤舒敏面膜",
+    "category": "product",
+    "steps": [
+        "敷面"
+    ],
+    "concerns": [
+        "乾燥",
+        "敏弱"
+    ],
+    "claims": [
+        "舒緩",
+        "保濕",
+        "提升代謝",
+        "恢復光澤"
+    ],
+    "usage": "進階療程（約90分鐘）中段敷用，強化彈力並穩定膚況。",
+    "tags": [
+        "面膜",
+        "舒敏"
+    ]
+}
+{
+    "skin_type_id": "dry_aging",
+    "title": "荷荷芭油（按摩）",
+    "category": "product",
+    "steps": [
+        "按摩"
+    ],
+    "concerns": [
+        "乾燥",
+        "粗糙",
+        "敏弱"
+    ],
+    "claims": [
+        "高親膚性",
+        "滋養不致痘",
+        "修復乾燥"
+    ],
+    "usage": "臉/身體按摩通用；搭配專業手法促進循環與吸收。",
+    "notes": "仿人類皮脂結構，富含維他命E。",
+    "tags": [
+        "按摩油"
+    ]
+}
+{
+    "skin_type_id": "dry_aging",
+    "title": "NB-1活膚賦活素",
+    "category": "product",
+    "steps": [
+        "精華導入"
+    ],
+    "concerns": [
+        "老化",
+        "鬆弛"
+    ],
+    "claims": [
+        "細胞活化",
+        "提升緊緻與彈性",
+        "修復力提升"
+    ],
+    "usage": "精華導入階段使用，可搭配冰導/儀器導入。",
+    "tags": [
+        "NB-1",
+        "賦活"
+    ]
+}
+{
+    "skin_type_id": "dry_aging",
+    "title": "NB-1活膚緊實面膜組合",
+    "category": "product",
+    "steps": [
+        "敷面"
+    ],
+    "concerns": [
+        "乾燥",
+        "鬆弛"
+    ],
+    "claims": [
+        "深層吸附髒污",
+        "保濕",
+        "緊實"
+    ],
+    "usage": "敷臉同時可進行放鬆（半身/頭部/手部）以提升舒適度。",
+    "tags": [
+        "面膜",
+        "組合"
+    ]
+}
+{
+    "skin_type_id": "dry_aging",
+    "title": "NB-1除皺緊膚霜",
+    "category": "product",
+    "steps": [
+        "整肌"
+    ],
+    "concerns": [
+        "細紋",
+        "鬆弛",
+        "乾燥"
+    ],
+    "claims": [
+        "保濕鎖水",
+        "拉提緊膚",
+        "鞏固屏障"
+    ],
+    "usage": "收尾整肌；亦可做為居家保養延續療程效果。",
+    "tags": [
+        "面霜",
+        "緊膚"
+    ]
+}
+
+{
+    "skin_type_id": "dull_brightening",
+    "title": "極亮晶瓷瞬效護理",
+    "category": "course",
+    "steps": [
+        "全程"
+    ],
+    "concerns": [
+        "黯沉",
+        "膚色不均",
+        "蠟黃"
+    ],
+    "claims": [
+        "速效提亮",
+        "均勻膚色",
+        "增加通透光澤"
+    ],
+    "usage": "欲美白/提亮者的加速課程。",
+    "tags": [
+        "瞬效護理",
+        "提亮"
+    ]
+}
+{
+    "skin_type_id": "dull_brightening",
+    "title": "NB-1深層美白臉部課程",
+    "category": "course",
+    "steps": [
+        "全程"
+    ],
+    "concerns": [
+        "黯沉",
+        "色素沉澱",
+        "乾燥枯黃"
+    ],
+    "claims": [
+        "淡斑提亮",
+        "抑制黑色素",
+        "透亮白皙"
+    ],
+    "usage": "完整美白流程，適合追求穩定提亮者。",
+    "tags": [
+        "NB-1",
+        "美白"
+    ]
+}
+{
+    "skin_type_id": "dull_brightening",
+    "title": "綠冷冷霜",
+    "category": "product",
+    "steps": [
+        "潔膚"
+    ],
+    "concerns": [
+        "乾燥",
+        "黯沉"
+    ],
+    "claims": [
+        "溫和卸妝",
+        "清潔同時保濕"
+    ],
+    "usage": "美白課程前潔膚，減少刺激與乾燥。",
+    "tags": [
+        "潔膚"
+    ]
+}
+{
+    "skin_type_id": "dull_brightening",
+    "title": "NB-1深層美白賦活素",
+    "category": "product",
+    "steps": [
+        "精華導入"
+    ],
+    "concerns": [
+        "色素沉澱",
+        "黯沉",
+        "膚色不均"
+    ],
+    "claims": [
+        "抑制黑色素形成",
+        "提亮均勻",
+        "細緻光澤"
+    ],
+    "usage": "導入並配合按摩以促進吸收。",
+    "tags": [
+        "NB-1",
+        "美白",
+        "賦活"
+    ]
+}
+{
+    "skin_type_id": "dull_brightening",
+    "title": "NB-1深層美白敷面組合",
+    "category": "product",
+    "steps": [
+        "敷面"
+    ],
+    "concerns": [
+        "黯沉",
+        "髒污堆積"
+    ],
+    "claims": [
+        "深層吸附髒污",
+        "導入亮白成分",
+        "放鬆鎮定"
+    ],
+    "usage": "敷面同時可做頭部與手部按摩以提升舒適。",
+    "tags": [
+        "面膜",
+        "組合",
+        "美白"
+    ]
+}
+{
+    "skin_type_id": "dull_brightening",
+    "title": "NB-1深層美白精華乳",
+    "category": "product",
+    "steps": [
+        "整肌"
+    ],
+    "concerns": [
+        "黯沉",
+        "乾燥"
+    ],
+    "claims": [
+        "鎖住美白成分",
+        "持久亮白滋潤",
+        "改善粗糙"
+    ],
+    "usage": "收尾整肌，維持提亮成效。",
+    "tags": [
+        "乳液",
+        "美白"
+    ]
+}
+
+{
+    "skin_type_id": "oily_acne",
+    "title": "極淨煥膚瞬效護理",
+    "category": "course",
+    "steps": [
+        "全程"
+    ],
+    "concerns": [
+        "出油",
+        "黑頭粉刺",
+        "痘疤",
+        "色素疤痕"
+    ],
+    "claims": [
+        "平衡油脂",
+        "去黑頭",
+        "改善痘疤"
+    ],
+    "usage": "油性膚況的速效清潔與煥膚方案。",
+    "tags": [
+        "瞬效護理",
+        "煥膚"
+    ]
+}
+{
+    "skin_type_id": "oily_acne",
+    "title": "NB-1細緻毛孔臉部課程",
+    "category": "course",
+    "steps": [
+        "全程"
+    ],
+    "concerns": [
+        "毛孔粗大",
+        "粉刺",
+        "痘疤"
+    ],
+    "claims": [
+        "控油收斂",
+        "改善粉刺",
+        "淡化痘疤"
+    ],
+    "usage": "針對油性/痘痘肌的毛孔管理流程。",
+    "tags": [
+        "NB-1",
+        "毛孔"
+    ]
+}
+{
+    "skin_type_id": "oily_acne",
+    "title": "棕冷冷霜",
+    "category": "product",
+    "steps": [
+        "潔膚"
+    ],
+    "concerns": [
+        "出油",
+        "堵塞"
+    ],
+    "claims": [
+        "去除多餘油脂與妝容",
+        "不致痘",
+        "不刺激毛孔"
+    ],
+    "usage": "油性肌卸妝/潔膚首選。",
+    "aka": [
+        "棕色冷霜"
+    ],
+    "tags": [
+        "潔膚",
+        "控油"
+    ]
+}
+{
+    "skin_type_id": "oily_acne",
+    "title": "荷荷芭油（按摩）",
+    "category": "product",
+    "steps": [
+        "按摩"
+    ],
+    "concerns": [
+        "水油不平衡"
+    ],
+    "claims": [
+        "高親膚性",
+        "不堵塞毛孔"
+    ],
+    "usage": "可視膚況縮短按摩3–10分鐘，協助平衡T/U區差異。",
+    "tags": [
+        "按摩油",
+        "油性可用"
+    ]
+}
+{
+    "skin_type_id": "oily_acne",
+    "title": "NB-1細緻毛孔賦活素",
+    "category": "product",
+    "steps": [
+        "精華導入"
+    ],
+    "concerns": [
+        "出油",
+        "毛孔粗大",
+        "粉刺",
+        "痘疤"
+    ],
+    "claims": [
+        "控油",
+        "舒緩",
+        "修護毛孔周邊",
+        "提升清爽度與細緻感"
+    ],
+    "usage": "精華導入階段使用，適合粉刺/面皰/痘疤肌。",
+    "tags": [
+        "NB-1",
+        "毛孔",
+        "控油"
+    ]
+}
+{
+    "skin_type_id": "oily_acne",
+    "title": "NB-1細緻毛孔敷面組合",
+    "category": "product",
+    "steps": [
+        "敷面"
+    ],
+    "concerns": [
+        "出油",
+        "髒污",
+        "毛孔粗大"
+    ],
+    "claims": [
+        "強效吸附皮脂與髒污",
+        "淡化油脂粒與粗大毛孔",
+        "同時潤澤、平衡水油"
+    ],
+    "usage": "清潔後敷面以深化淨化與收斂。",
+    "tags": [
+        "面膜",
+        "組合",
+        "毛孔"
+    ]
+}
+{
+    "skin_type_id": "oily_acne",
+    "title": "NB-1面皰修護精華霜",
+    "category": "product",
+    "steps": [
+        "整肌"
+    ],
+    "concerns": [
+        "面皰",
+        "痘痘",
+        "泛紅"
+    ],
+    "claims": [
+        "抗痘",
+        "穩定問題區域",
+        "收斂修復",
+        "淡化痘疤"
+    ],
+    "usage": "作為療程最後一道精華霜，提供修護與保護。",
+    "tags": [
+        "面霜",
+        "抗痘"
+    ]
+}
+
+{
+    "skin_type_id": "sensitive",
+    "title": "極能活護瞬效護理",
+    "category": "course",
+    "steps": [
+        "全程"
+    ],
+    "concerns": [
+        "敏感",
+        "泛紅",
+        "乾癢",
+        "屏障受損"
+    ],
+    "claims": [
+        "快速舒緩",
+        "保濕修護",
+        "強化屏障"
+    ],
+    "usage": "敏弱肌與季節轉換期的安撫方案。",
+    "tags": [
+        "瞬效護理",
+        "舒敏"
+    ]
+}
+{
+    "skin_type_id": "sensitive",
+    "title": "NB-1修護敏感臉部課程",
+    "category": "course",
+    "steps": [
+        "全程"
+    ],
+    "concerns": [
+        "敏感",
+        "泛紅",
+        "術後脆弱"
+    ],
+    "claims": [
+        "降低刺激反應",
+        "修護屏障",
+        "穩定膚況"
+    ],
+    "usage": "敏弱/術後等高脆弱期的完整流程。",
+    "tags": [
+        "NB-1",
+        "舒敏"
+    ]
+}
+{
+    "skin_type_id": "sensitive",
+    "title": "白冷冷霜",
+    "category": "product",
+    "steps": [
+        "潔膚"
+    ],
+    "concerns": [
+        "敏感",
+        "泛紅",
+        "乾癢"
+    ],
+    "claims": [
+        "極度溫和",
+        "無香精酒精",
+        "減少摩擦",
+        "卸妝潔膚二合一"
+    ],
+    "usage": "為後續舒緩產品提供不破壞屏障的清潔基礎。",
+    "aka": [
+        "白色冷霜"
+    ],
+    "tags": [
+        "潔膚",
+        "低敏"
+    ]
+}
+{
+    "skin_type_id": "sensitive",
+    "title": "荷荷芭油（按摩）",
+    "category": "product",
+    "steps": [
+        "按摩"
+    ],
+    "concerns": [
+        "乾燥",
+        "敏感"
+    ],
+    "claims": [
+        "低致敏",
+        "安撫乾燥敏感區域",
+        "軟化角質"
+    ],
+    "usage": "敏弱肌可短時、輕柔按摩以減少刺激。",
+    "tags": [
+        "按摩油",
+        "低敏"
+    ]
+}
+{
+    "skin_type_id": "sensitive",
+    "title": "NB-1修敏賦活素",
+    "category": "product",
+    "steps": [
+        "精華導入"
+    ],
+    "concerns": [
+        "敏感",
+        "屏障受損",
+        "術後"
+    ],
+    "claims": [
+        "強化耐受性",
+        "恢復屏障功能",
+        "抗炎舒緩"
+    ],
+    "usage": "精華導入；適合醫美術後與季節性換膚期。",
+    "tags": [
+        "NB-1",
+        "舒敏",
+        "賦活"
+    ]
+}
+{
+    "skin_type_id": "sensitive",
+    "title": "NB-1修護敏感敷面組合",
+    "category": "product",
+    "steps": [
+        "敷面"
+    ],
+    "concerns": [
+        "泛紅",
+        "發熱",
+        "乾燥"
+    ],
+    "claims": [
+        "低敏植萃",
+        "冷敷原理",
+        "快速舒緩紅腫",
+        "鎮定保濕強化屏障"
+    ],
+    "usage": "泛紅初期或過敏修護期使用。",
+    "tags": [
+        "面膜",
+        "組合",
+        "舒敏"
+    ]
+}
+{
+    "skin_type_id": "sensitive",
+    "title": "NB-1修護精華霜",
+    "category": "product",
+    "steps": [
+        "整肌"
+    ],
+    "concerns": [
+        "敏感",
+        "乾燥",
+        "環境刺激"
+    ],
+    "claims": [
+        "長效鎖水",
+        "強化抵抗力",
+        "預防反覆過敏"
+    ],
+    "usage": "日常可用，維持穩定與保護。",
+    "tags": [
+        "面霜",
+        "舒敏"
+    ]
+}
+
+{
+    "skin_type_id": "oily_acne",
+    "title": "按摩時長建議（油性）",
+    "category": "protocol_rule",
+    "steps": [],
+    "concerns": [
+        "出油",
+        "粉刺"
+    ],
+    "claims": [
+        "降低負擔",
+        "提升清爽度"
+    ],
+    "usage": "油性肌可視膚況將按摩縮短至3–10分鐘，並保持手法輕柔。",
+    "tags": [
+        "流程規範"
+    ]
+}
